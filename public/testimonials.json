@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "SurveyMaster",
+      "img": "survey_master.png",
+      "description": "Empower your surveys with SurveyMaster – the ultimate solution for seamless Polling and Survey experiences, featuring secure payment integration and rich analytics."
+    },
+    {
+      "id": 2,
+      "name": "OpinionHub",
+      "img": "opinion_hub.png",
+      "description": "OpinionHub revolutionizes data collection. Create, share, and analyze surveys effortlessly, with integrated payment options for a comprehensive and user-friendly experience."
+    },
+    {
+      "id": 3,
+      "name": "VoteSphere",
+      "img": "vote_sphere.png",
+      "description": "VoteSphere, your go-to platform for engaging polls and surveys. Unlock the power of user interaction, payment integration, and robust analytics in a single, intuitive application."
+    },
+    {
+      "id": 4,
+      "name": "SurveyGenius",
+      "img": "survey_genius.png",
+      "description": "SurveyGenius offers a dynamic approach to surveys. Seamlessly integrate payments, craft interactive surveys, and gain valuable insights with this innovative polling application."
+    },
+    {
+      "id": 5,
+      "name": "PollCraft",
+      "img": "poll_craft.png",
+      "description": "Craft compelling polls with PollCraft. Enhance user engagement, enable secure payments, and leverage advanced analytics for a comprehensive Polling and Survey experience."
+    },
+    {
+      "id": 6,
+      "name": "InsightfulPolls",
+      "img": "insightful_polls.png",
+      "description": "InsightfulPolls delivers more than just surveys. Dive into rich analytics, seamless payment integration, and an interactive platform that redefines the way you collect valuable data."
+    },
+    {
+      "id": 7,
+      "name": "PaymentSurveys",
+      "img": "payment_surveys.png",
+      "description": "PaymentSurveys offers a unique blend of surveys and secure payment integration. Elevate your data collection process with this intuitive platform designed for user convenience."
+    },
+    {
+      "id": 8,
+      "name": "QuickInsights",
+      "img": "quick_insights.png",
+      "description": "QuickInsights provides instant data gratification. Create surveys effortlessly, process secure payments, and gain quick insights through an intuitive and user-friendly platform."
+    },
+    {
+      "id": 9,
+      "name": "PayPerOpinion",
+      "img": "pay_per_opinion.png",
+      "description": "PayPerOpinion ensures your opinions are valued. Participate in surveys, experience secure payments, and contribute to meaningful data collection on this innovative polling platform."
+    }
+  ]
+  
