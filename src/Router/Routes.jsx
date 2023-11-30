@@ -10,6 +10,7 @@ import Survey from '../Pages/Dashboard/Survey/Survey';
 import ManageUser from '../Pages/Dashboard/ManageUser/ManageUser';
 import UpdateSurvey from '../Pages/Dashboard/UpdateSurvey/UpdateSurvey';
 import AllUser from '../Pages/Dashboard/AllUsers/AllUser';
+import Details from '../Pages/Details/Details';
 
 
 const Routes = createBrowserRouter([
@@ -24,6 +25,10 @@ const Routes = createBrowserRouter([
             {
                 path: "/surveys",
                 element: <Surveys></Surveys>
+            },
+            {
+                path: "/surveyDetails/:id",
+                element: <Details></Details>
             },
         
             {

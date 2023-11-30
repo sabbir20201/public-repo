@@ -34,7 +34,7 @@ const Survey = () => {
         .catch(error =>{
             console.log("error here:",error);
         })
-        // fetch("http://localhost:5000/addSurvey", {
+        // fetch("https://assignment-12-server-nu-roan.vercel.app/addSurvey", {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'

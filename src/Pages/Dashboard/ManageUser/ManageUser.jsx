@@ -10,7 +10,7 @@ const ManageUser = () => {
   const [data, setData] = useState([])
   const [cart, refetch] = UseCart()
   useEffect(() => {
-    fetch("http://localhost:5000/getAllSurveys")
+    fetch("https://assignment-12-server-nu-roan.vercel.app/getAllSurveys")
       .then(res => res.json())
       .then(data => setData(data))
   }, [])

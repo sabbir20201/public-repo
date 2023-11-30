@@ -3,7 +3,8 @@
 * people can create a survey
 * admin can delete a survey
 * admin can update a survey
-* 
+* you can mange users
+* you can delete user
 
 
 

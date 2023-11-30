@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SurveyFeatureCard = ({ item }) => {
     console.log(item);
@@ -13,7 +14,8 @@ const SurveyFeatureCard = ({ item }) => {
                     <p>Like: </p> <span>Dislike: </span>
                     <p>Timestamp: </p>
                     <div className="card-actions justify-start">
-                        <button className="btn btn-primary">Details</button>
+                        <Link to={`/surveyDetails/${_id}`}>  <button className="btn btn-primary">Details</button></Link>
+                       
                     </div>
                 </div>
             </div>
