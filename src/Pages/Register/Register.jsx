@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const Register = () => {
     const axiosPublic = useAxiosPublic(); 
     const {createUser} = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleRegister = event => {
         event.preventDefault()
         const form = event.target;
@@ -24,9 +27,14 @@ const Register = () => {
             axiosPublic.post('/users', userInfo)
             .then(res =>{
                 if(res.data.insertedId){
-                    console.log('addeed database');
-                    // reset();
-                  
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "User crated successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                  navigate('/')
                     console.log(result.user);
                 }
                 // navigate 
@@ -43,7 +51,7 @@ const Register = () => {
                <div className="hero bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold">Register here</h1>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -72,7 +80,9 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
+                            <h1>Already have an account ?<Link to="/login" className='text-green-600'>Login</Link></h1>
                         </form>
+                       
                     </div>
                 </div>
             </div>

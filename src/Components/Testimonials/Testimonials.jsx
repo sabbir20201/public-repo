@@ -52,12 +52,12 @@ const Testimonials = () => {
                   <div className="card card-compact bg-base-100 shadow-xl">
                     <figure> <div className="avatar pt-5 start-0">
                       <div className="w-16 rounded-full">
-                        <img src="https://i.ibb.co/9c495Nt/istockphoto-1399565382-170667a.webp" />
+                        <img src={item.img} />
                       </div>
                     </div></figure>
                     <div className="card-body text-center">
-                      <h2 className="text-center font-semibold text-2xl">Sabbir ahmad</h2>
-                      <p>User testimonials speak volumes about our Polling and Survey App with Payment Integration. Discover a seamless experience in crafting surveys, secure payment transactions, and insightful</p>
+                      <h2 className="text-center font-semibold text-2xl">{item.name}</h2>
+                      <p>{item.description}</p>
                     </div>
                   </div>
                 </div>

@@ -5,14 +5,14 @@ import UseCart from "../../../Hooks/UseCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [cart] = UseCart();
+
   const handleLogOut = () => {
     logOut()
       .then(result => {
         console.log(result.user);
       })
       .catch(error => {
-        console.error(error.message);
+        console.error(error);
 
       })
   }
@@ -20,9 +20,7 @@ const Navbar = () => {
     <li><Link to="/">Home</Link></li>
     <li><Link to="/surveys">Surveys</Link></li>
     <li><Link to="/register">register</Link></li>
-    <li><Link to="/login">login</Link></li>
     <li><Link to="/dashboard/cart">DASHBOARD</Link></li>
-    <li><Link to="/">{cart.length}</Link></li>
 
 
   </>
@@ -38,7 +36,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">
+
+            <img className="w-12 rounded-full" src="https://i.ibb.co/4ZCv8K5/images.png" alt="" />
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

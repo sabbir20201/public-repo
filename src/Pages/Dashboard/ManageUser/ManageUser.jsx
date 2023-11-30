@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MdDelete } from "react-icons/md";
 import { MdOutlineSystemUpdateAlt } from "react-icons/md";
 import Swal from 'sweetalert2';
-import { axiosSecure } from '../../../Hooks/UseAxiosSecure';
+import { axiosSecure } from '../../../Hooks/useAxiosSecure';
 import { Link } from 'react-router-dom';
 import UseCart from '../../../Hooks/UseCart';
 
@@ -47,7 +47,7 @@ const ManageUser = () => {
   }
   return (
     <div>
-      <h1>manage user {cart.length}</h1>
+      <h1>manage user : {cart.length}</h1>
       <div className="">
 
         <div className="overflow-x-auto">
@@ -86,7 +86,7 @@ const ManageUser = () => {
                     <br />
                     <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
                   </td>
-                  <td> <Link to={`/updateSurvey/${item._id}`}><button className='btn'><MdOutlineSystemUpdateAlt />
+                  <td> <Link to={`/dashboard/updateSurvey/${item._id}`}><button className='btn'><MdOutlineSystemUpdateAlt />
                   </button> </Link></td>
                   <th>
                     <button onClick={() => handleDelete(item._id)} className="btn text-red-600"><MdDelete /></button>

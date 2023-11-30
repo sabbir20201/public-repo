@@ -10,7 +10,7 @@ import Survey from '../Pages/Dashboard/Survey/Survey';
 import ManageUser from '../Pages/Dashboard/ManageUser/ManageUser';
 import UpdateSurvey from '../Pages/Dashboard/UpdateSurvey/UpdateSurvey';
 import AllUser from '../Pages/Dashboard/AllUsers/AllUser';
-import PrivateRoutes from './PrivateRoutes';
+
 
 const Routes = createBrowserRouter([
     {
@@ -39,7 +39,7 @@ const Routes = createBrowserRouter([
     },
     {
         path: "dashboard",
-        element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
+        element: <Dashboard></Dashboard>,
         children: [
             {
                 path: "cart",
@@ -54,7 +54,7 @@ const Routes = createBrowserRouter([
                 element: <ManageUser></ManageUser>
             },
             {
-                path: "updateSurvey",
+                path: "updateSurvey/:id",
                 element: <UpdateSurvey></UpdateSurvey>
             },
             // admin routes

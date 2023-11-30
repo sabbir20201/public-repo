@@ -1,19 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import UseAxiosSecure from '../../../Hooks/UseAxiosSecure';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { MdDelete } from 'react-icons/md';
 import { FaUsers } from "react-icons/fa";
 import Swal from 'sweetalert2';
 
 const AllUser = () => {
-    const axiosSecure = UseAxiosSecure();
+    const axiosSecure = useAxiosSecure();
 
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/users');
-            return res.data
-
+            const res = await axiosSecure.get('/users', {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('access-token')}`
+                }
+            });
+            return res.data;
         }
     })
 
@@ -66,7 +69,7 @@ const AllUser = () => {
     }
     return (
         <div className=''>
-            <h1 className='text-3xl'>all users</h1>
+       
             <h1 className='text-3xl'> total users : {users.length}</h1>
        
                 <div className="overflow-x-auto">

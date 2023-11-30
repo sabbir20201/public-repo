@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
     const {login } = useContext(AuthContext)
-
+    const navigate = useNavigate()
     const handleLogin = event =>{
         event.preventDefault()
 
@@ -15,7 +17,14 @@ const Login = () => {
         login(email, password)
         .then(result =>{
             console.log(result.user);
-            console.log("login successfully");
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "User login successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+              navigate('/')
         })
         .catch(error =>{
             console.error(error.message)
@@ -24,7 +33,7 @@ const Login = () => {
     }
     return (
         <div>
-            <h1>login now</h1>
+           
             <div className="hero bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center lg:text-left">
@@ -50,8 +59,9 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Register</button>
+                                <button className="btn btn-primary">Login</button>
                             </div>
+                            <h1>Are you new here ?<Link to="/register" className='text-green-600'> SignUp</Link></h1>
                         </form>
                         <div className="divider">OR</div>
                         <SocialLogin></SocialLogin>

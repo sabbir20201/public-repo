@@ -8,49 +8,49 @@
     {
       "id": 2,
       "name": "OpinionHub",
-      "img": "https://i.ibb.co/KLhPdMK/man-suit-looks-camera-smiles-260nw-606177233.webp",
+      "img": "https://i.ibb.co/tMwkjTM/download.jpg",
       "description": "OpinionHub revolutionizes data collection. Create, share, and analyze surveys effortlessly, with integrated payment options for a comprehensive and user-friendly experience."
     },
     {
       "id": 3,
       "name": "VoteSphere",
-      "img": "vote_sphere.png",
+      "img": "https://i.ibb.co/KLhPdMK/man-suit-looks-camera-smiles-260nw-606177233.webp",
       "description": "VoteSphere, your go-to platform for engaging polls and surveys. Unlock the power of user interaction, payment integration, and robust analytics in a single, intuitive application."
     },
     {
       "id": 4,
       "name": "SurveyGenius",
-      "img": "survey_genius.png",
+      "img": "https://i.ibb.co/bBw9zgX/360-F-224869519-a-Rae-Lneq-ALf-PNBzg0xx-MZXghtv-BXkf-IA.jpg",
       "description": "SurveyGenius offers a dynamic approach to surveys. Seamlessly integrate payments, craft interactive surveys, and gain valuable insights with this innovative polling application."
     },
     {
       "id": 5,
       "name": "PollCraft",
-      "img": "poll_craft.png",
+      "img": "https://i.ibb.co/d0NZMC5/portrait-handsome-caucasian-man-formal-260nw-2142820441.webp",
       "description": "Craft compelling polls with PollCraft. Enhance user engagement, enable secure payments, and leverage advanced analytics for a comprehensive Polling and Survey experience."
     },
     {
       "id": 6,
       "name": "InsightfulPolls",
-      "img": "insightful_polls.png",
+      "img": "https://i.ibb.co/KLhPdMK/man-suit-looks-camera-smiles-260nw-606177233.webp",
       "description": "InsightfulPolls delivers more than just surveys. Dive into rich analytics, seamless payment integration, and an interactive platform that redefines the way you collect valuable data."
     },
     {
       "id": 7,
       "name": "PaymentSurveys",
-      "img": "payment_surveys.png",
+      "img": "https://i.ibb.co/KLhPdMK/man-suit-looks-camera-smiles-260nw-606177233.webp",
       "description": "PaymentSurveys offers a unique blend of surveys and secure payment integration. Elevate your data collection process with this intuitive platform designed for user convenience."
     },
     {
       "id": 8,
       "name": "QuickInsights",
-      "img": "quick_insights.png",
+      "img": "https://i.ibb.co/d0NZMC5/portrait-handsome-caucasian-man-formal-260nw-2142820441.webp",
       "description": "QuickInsights provides instant data gratification. Create surveys effortlessly, process secure payments, and gain quick insights through an intuitive and user-friendly platform."
     },
     {
       "id": 9,
       "name": "PayPerOpinion",
-      "img": "pay_per_opinion.png",
+      "img": "https://i.ibb.co/tMwkjTM/download.jpg",
       "description": "PayPerOpinion ensures your opinions are valued. Participate in surveys, experience secure payments, and contribute to meaningful data collection on this innovative polling platform."
     }
   ]

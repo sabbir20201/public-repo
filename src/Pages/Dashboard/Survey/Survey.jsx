@@ -1,8 +1,8 @@
 import Swal from "sweetalert2";
-import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const Survey = () => {
-    const axiosSecure = UseAxiosSecure()
+    const axiosSecure = useAxiosSecure()
     const handleSurvey = event => {
         event.preventDefault()
         const form = event.target;

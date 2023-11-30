@@ -54,7 +54,7 @@ const AuthProvider = ({ children }) => {
                 console.log(currentUser, "observe user");
             })
             return unSubsCribe
-        }, [])
+        }, [axiosPublic])
         const value = {
             user,
             loading,

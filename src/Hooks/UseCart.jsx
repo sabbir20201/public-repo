@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import UseAxiosSecure from "./UseAxiosSecure";
+import useAxiosSecure from "./useAxiosSecure";
 
 
 const UseCart = () => {
     //     tan stack query
-    const axiosSecure = UseAxiosSecure()
+    const axiosSecure = useAxiosSecure()
     const {refetch, data: cart = [] } = useQuery({
         queryKey: ['cart'],
         queryFn: async () => {
