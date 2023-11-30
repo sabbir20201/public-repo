@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 
 const Register = () => {
+    const axiosPublic = useAxiosPublic(); 
     const {createUser} = useContext(AuthContext)
     const handleRegister = event => {
         event.preventDefault()
@@ -13,7 +15,23 @@ const Register = () => {
         
         createUser(email, password)
         .then(result =>{
-            console.log(result.user);
+            // create user entry in the database 
+            const userInfo = {
+                name,
+                email
+                
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(res =>{
+                if(res.data.insertedId){
+                    console.log('addeed database');
+                    // reset();
+                  
+                    console.log(result.user);
+                }
+                // navigate 
+            })
+           
         })
         .catch(error =>{
             console.error(error.message);

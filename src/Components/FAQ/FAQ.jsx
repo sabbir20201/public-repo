@@ -2,7 +2,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 
 const FAQ = () => {
     return (
-        <div className="my-12 text-center bg-slate-400">
+        <div className="my-12 text-center">
             <SectionTitle
             heading={"Frequently Asked Question"}
             subHeading={"Discover how our Polling and Survey App seamlessly integrates secure payments, offers customizable surveys, subscription plans, and prioritizes data privacy."}

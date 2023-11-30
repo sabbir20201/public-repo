@@ -2,13 +2,13 @@
     {
       "id": 1,
       "name": "SurveyMaster",
-      "img": "survey_master.png",
+      "img": "https://i.ibb.co/KLhPdMK/man-suit-looks-camera-smiles-260nw-606177233.webp",
       "description": "Empower your surveys with SurveyMaster – the ultimate solution for seamless Polling and Survey experiences, featuring secure payment integration and rich analytics."
     },
     {
       "id": 2,
       "name": "OpinionHub",
-      "img": "opinion_hub.png",
+      "img": "https://i.ibb.co/KLhPdMK/man-suit-looks-camera-smiles-260nw-606177233.webp",
       "description": "OpinionHub revolutionizes data collection. Create, share, and analyze surveys effortlessly, with integrated payment options for a comprehensive and user-friendly experience."
     },
     {

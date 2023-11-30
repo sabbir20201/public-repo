@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 
 const Login = () => {
@@ -52,6 +53,8 @@ const Login = () => {
                                 <button className="btn btn-primary">Register</button>
                             </div>
                         </form>
+                        <div className="divider">OR</div>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>

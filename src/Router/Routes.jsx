@@ -6,6 +6,11 @@ import Register from '../Pages/Register/Register';
 import Login from '../Pages/Login/Login';
 import Dashboard from '../MainLayOut/Dashboard';
 import Cart from '../Pages/Dashboard/Cart/Cart';
+import Survey from '../Pages/Dashboard/Survey/Survey';
+import ManageUser from '../Pages/Dashboard/ManageUser/ManageUser';
+import UpdateSurvey from '../Pages/Dashboard/UpdateSurvey/UpdateSurvey';
+import AllUser from '../Pages/Dashboard/AllUsers/AllUser';
+import PrivateRoutes from './PrivateRoutes';
 
 const Routes = createBrowserRouter([
     {
@@ -20,6 +25,7 @@ const Routes = createBrowserRouter([
                 path: "/surveys",
                 element: <Surveys></Surveys>
             },
+        
             {
                 path: "/register",
                 element: <Register></Register>
@@ -33,12 +39,30 @@ const Routes = createBrowserRouter([
     },
     {
         path: "dashboard",
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
         children: [
             {
                 path: "cart",
                 element: <Cart></Cart>
+            },
+            {
+                path: "survey",
+                element: <Survey></Survey>
+            },
+            {
+                path: "manageUser",
+                element: <ManageUser></ManageUser>
+            },
+            {
+                path: "updateSurvey",
+                element: <UpdateSurvey></UpdateSurvey>
+            },
+            // admin routes
+            {
+                path: 'users',
+                element: <AllUser></AllUser>
             }
+
         ]
     }
 

@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import UseCart from "../../../Hooks/UseCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-
+  const [cart] = UseCart();
   const handleLogOut = () => {
     logOut()
       .then(result => {
@@ -17,10 +18,11 @@ const Navbar = () => {
   }
   const navLinks = <>
     <li><Link to="/">Home</Link></li>
-    { user && <li><Link to="/surveys">Surveys</Link></li>}
+    <li><Link to="/surveys">Surveys</Link></li>
     <li><Link to="/register">register</Link></li>
     <li><Link to="/login">login</Link></li>
     <li><Link to="/dashboard/cart">DASHBOARD</Link></li>
+    <li><Link to="/">{cart.length}</Link></li>
 
 
   </>
