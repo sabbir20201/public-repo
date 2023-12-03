@@ -13,14 +13,13 @@ const SurveyFeature = () => {
         // const axiosPublic = useAxiosPublic();
         axiosPublic.get('/getAllSurveys')
             .then(result => {
-                console.log(result.data);
+                // console.log(result.data);
                 setData(result.data)
             })
             .catch(error => {
                 console.log(error);
             })
     }, [])
-    console.log(data);
 
     return (
         <div className="my-10">

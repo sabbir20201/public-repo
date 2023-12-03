@@ -16,7 +16,7 @@ const ManageUser = () => {
   }, [])
 
 
-  const handleDelete = id => {
+  const handleDelete = user => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -28,7 +28,7 @@ const ManageUser = () => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        axiosSecure.delete(`/delete/${id}`)
+        axiosSecure.delete(`/delete/${user._id}`)
           .then(res => {
             if(res.data.deletedCount > 0) {
               refetch()
@@ -38,8 +38,9 @@ const ManageUser = () => {
                 icon: "success"
 
               });
-              const remaining = data.filter(item => item._id !== id)
+              const remaining = data.filter(item => item._id !== user)
               setData(remaining)
+              
             }
           })
       }
@@ -47,7 +48,7 @@ const ManageUser = () => {
   }
   return (
     <div>
-      <h1>manage user : {cart.length}</h1>
+      <h1 className='text-3xl font-bold pl-5'>Item: {cart.length}</h1>
       <div className="">
 
         <div className="overflow-x-auto">

@@ -82,6 +82,7 @@ const Register = () => {
                             </div>
                             <h1>Already have an account ?<Link to="/login" className='text-green-600'>Login</Link></h1>
                         </form>
+                   
                        
                     </div>
                 </div>

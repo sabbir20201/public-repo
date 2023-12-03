@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SurveyFeatureCard = ({ item }) => {
-    console.log(item);
     const {title, _id, description, category} = item
     return (
         <div>

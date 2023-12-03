@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 export const axiosSecure = axios.create({
     baseURL: 'https://assignment-12-server-nu-roan.vercel.app'
@@ -12,7 +13,7 @@ const useAxiosSecure = () => {
 
     axiosSecure.interceptors.request.use(function(config){
       const token = localStorage.getItem('access-token');
-        console.log('request stopped by interceptor', token);
+        // console.log('request stopped by interceptor', token);
         config.headers.authorization =   `Bearer ${token}`;
 
         return config

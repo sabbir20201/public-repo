@@ -20,6 +20,10 @@ const AllUser = () => {
         }
     })
 
+
+
+
+
     const handleMakeAdmin = user =>{
         axiosSecure.patch(`/users/admin/${user._id}`)
         .then(res =>{
@@ -29,7 +33,7 @@ const AllUser = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: `${user.name} is an admin now`,
+                    title: `${user.name} is an surviyor now`,
                     showConfirmButton: false,
                     timer: 1500
                   });
@@ -37,7 +41,7 @@ const AllUser = () => {
         })
     }
 
-    const handleDeleteUser = user =>{
+    const handleDeleteUser = user => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -46,65 +50,66 @@ const AllUser = () => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-      
-              axiosSecure.delete(`/users/${user}`)
-                .then(res => {
-                  if(res.data.deletedCount > 0) {
 
-                    refetch()
-                    Swal.fire({
-                      title: "Deleted!",
-                      text: "Your file has been deleted.",
-                      icon: "success"
-      
-                    });
-                    // const remaining = data.filter(item => item._id !== id)
-                    // setData(remaining)
-                  }
-                })
+                axiosSecure.delete(`/users/${user}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+
+                            refetch()
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+
+                            });
+                            // const remaining = data.filter(item => item._id !== id)
+                            // setData(remaining)
+                        }
+                    })
             }
-          });
+        });
     }
     return (
         <div className=''>
-       
-            <h1 className='text-3xl'> total users : {users.length}</h1>
-       
-                <div className="overflow-x-auto">
-                    <table className="table table-zebra">
-                        {/* head */}
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                users.map((user, index) => <tr key={user._id}>
-                                    <th>{index + 1}</th>
-                                    <td>{user.name}</td>
-                                    <td>{user.email}</td>
-                             
-                                    <td>
-                                        { user.role == 'admin' ? 'Admin' :<button onClick={() => handleMakeAdmin(user)} className="btn text-orange-500"><FaUsers /></button>}
-                                    </td>
-                                    <td>
-                                        <button onClick={() => handleDeleteUser(user._id)} className="btn text-red-600"><MdDelete /></button>
-                                    </td>
-                                </tr>)
-                            }
+
+            <h1 className='text-3xl pl-5 font-bold'> Total Users : {users.length}</h1>
+
+            <div className="overflow-x-auto">
+                <table className="table table-zebra">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            users.map((user, index) => <tr key={user._id}>
+                                <th>{index + 1}</th>
+                                <td>{user.name}</td>
+                                <td>{user.email}</td>
+
+                                <td>
+                                    {user?.role == 'admin' ? 'Admin' : <button onClick={() => handleMakeAdmin(user)} className="btn text-orange-500"><FaUsers /></button>}
+                                </td>
+
+                                <td>
+                                    <button onClick={() => handleDeleteUser(user._id)} className="btn text-red-600"><MdDelete /></button>
+                                </td>
+                            </tr>)
+                        }
 
 
-                        </tbody>
-                    </table>
-                </div>
-          
+                    </tbody>
+                </table>
+            </div>
+
 
 
         </div>

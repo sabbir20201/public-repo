@@ -1,8 +1,10 @@
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { useRef } from "react";
 
 const Survey = () => {
     const axiosSecure = useAxiosSecure()
+    const formRef = useRef()
     const handleSurvey = event => {
         event.preventDefault()
         const form = event.target;
@@ -28,6 +30,7 @@ const Survey = () => {
                     showConfirmButton: false,
                     timer: 1500
                   });
+                  formRef.current.reset()
             }
           
         })
@@ -53,7 +56,7 @@ const Survey = () => {
                 <h1 className="my-9 mx-auto font-bold text-3xl">Add A Survey</h1>
             <div className="hero bg-base-200">
                     <div className="card shrink-0 w-full shadow-2xl bg-base-100">
-                        <form onSubmit={handleSurvey} className="card-body">
+                        <form ref={formRef} onSubmit={handleSurvey} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Survey Title</span>

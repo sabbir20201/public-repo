@@ -3,6 +3,9 @@ import { FaHome } from "react-icons/fa";
 import { FaAlignJustify } from "react-icons/fa";
 import { IoBagAddSharp } from "react-icons/io5";
 import useAdmin from "../Hooks/useAdmin";
+import { FaUsersGear } from "react-icons/fa6";
+import { GrDocumentUpdate } from "react-icons/gr";
+import { FaRegUserCircle } from "react-icons/fa";
 const Dashboard = () => {
 
     const [isAdmin] = useAdmin();
@@ -30,32 +33,33 @@ const Dashboard = () => {
                             </li>
                             <li>
                                 <NavLink to="/dashboard/manageUser">
-                                    <FaHome></FaHome>
+                                <GrDocumentUpdate />
                                     Manage items</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/users">
-                                    <FaHome></FaHome>
+                                <FaUsersGear />
                                     All users</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/usersProfile">
+                                <FaRegUserCircle />
+                                 Users Profile</NavLink>
                             </li>
                         </>
                             :
                             <>
-                                <li>
-                                    <NavLink to="/">
-                                        <FaHome></FaHome>
-                                        Home</NavLink>
-                                </li>
+                               
                             </>
                     }
 
 
                     <div className="divider">or</div>
                     <li>
-                        <NavLink to="/">
-                            <FaHome></FaHome>
-                            Home</NavLink>
-                    </li>
+                                <NavLink to="/">
+                                <FaRegUserCircle />
+                                 Home</NavLink>
+                            </li>
 
                 </ul>
 

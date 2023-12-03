@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LatestSurveyCard = ({item}) => {
-    const {title, _id, description, category} = item
+    const {title, description, category} = item
 
     return (
         <div>

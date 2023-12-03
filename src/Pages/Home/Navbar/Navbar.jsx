@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import UseCart from "../../../Hooks/UseCart";
+import { FaDollyFlatbed } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -19,8 +20,11 @@ const Navbar = () => {
   const navLinks = <>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/surveys">Surveys</Link></li>
-    <li><Link to="/register">register</Link></li>
-    <li><Link to="/dashboard/cart">DASHBOARD</Link></li>
+    <li><Link to="/pricing">Pricing<FaDollyFlatbed className="text-red-600 text-2xl" /></Link></li>
+    {
+      user && <li><Link to="/dashboard/cart">DASHBOARD</Link></li>
+    }
+    
 
 
   </>

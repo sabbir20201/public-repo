@@ -11,6 +11,10 @@ import ManageUser from '../Pages/Dashboard/ManageUser/ManageUser';
 import UpdateSurvey from '../Pages/Dashboard/UpdateSurvey/UpdateSurvey';
 import AllUser from '../Pages/Dashboard/AllUsers/AllUser';
 import Details from '../Pages/Details/Details';
+import Pricing from '../Pages/Pricing/Pricing';
+import Payment from '../Pages/Payment/Payment';
+import UserProfile from '../Pages/Dashboard/UserProfile/UserProfile';
+
 
 
 const Routes = createBrowserRouter([
@@ -28,9 +32,19 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "/surveyDetails/:id",
-                element: <Details></Details>
+                element: <Details></Details>,
+                loader: ({params}) => fetch(`https://assignment-12-server-nu-roan.vercel.app/getAllSurveys/${params.id}`)
+            },
+            {
+                path: "/pricing",
+                element: <Pricing></Pricing>
+            },
+            {
+                path: "/payment",
+                element: <Payment></Payment>
             },
         
+
             {
                 path: "/register",
                 element: <Register></Register>
@@ -39,7 +53,7 @@ const Routes = createBrowserRouter([
                 path: "/login",
                 element: <Login></Login>
             }
-           
+
         ]
     },
     {
@@ -60,12 +74,17 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "updateSurvey/:id",
-                element: <UpdateSurvey></UpdateSurvey>
+                element: <UpdateSurvey></UpdateSurvey>,
+                loader: ({params}) => fetch(`https://assignment-12-server-nu-roan.vercel.app/getAllSurveys/${params.id}`)
             },
             // admin routes
             {
                 path: 'users',
                 element: <AllUser></AllUser>
+            },
+            {
+                path: 'usersProfile',
+                element: <UserProfile></UserProfile>
             }
 
         ]

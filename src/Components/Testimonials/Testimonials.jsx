@@ -17,7 +17,6 @@ const Testimonials = () => {
     fetch('testimonials.json')
       .then(res => res.json())
       .then(data => setData(data))
-    console.log(data.length);
   }, [])
   return (
     <div className='my-12'>

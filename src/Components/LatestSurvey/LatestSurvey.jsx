@@ -13,14 +13,13 @@ const LatestSurvey = () => {
         // const axiosPublic = useAxiosPublic();
         axiosPublic.get('/getAllSurveys')
             .then(result => {
-                console.log(result.data);
+                // console.log(result.data);
                 setData(result.data)
             })
             .catch(error => {
                 console.log(error);
             })
     }, [])
-    console.log(data);
     return (
         <div>
             <h1 className="text-center text-4xl font-bold mb-6">Latest Surveys</h1>
